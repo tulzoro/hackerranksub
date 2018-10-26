@@ -1,0 +1,15 @@
+    static void miniMaxSum(int[] arr) {
+        //variables 
+        long tot=0, holdMax, holdLow;
+        holdMax=arr[0]; 
+        holdLow=arr[0];
+        for(int i : arr){
+            tot+=i;
+            //checks for highest value in array
+            if(holdMax<i) holdMax=i;
+            //checks for lowest value in array
+            if(holdLow>i) holdLow=i;
+        }
+        //in parenthese -> subtracts total by the highest and lowest
+        System.out.println((tot - holdMax) + " " + (tot - holdLow));
+    }
