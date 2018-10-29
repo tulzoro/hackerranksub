@@ -1,6 +1,6 @@
     static String timeConversion(String s) {
         //vars
-        boolean isAM = s.contains("AM") ? true : false; //checks if AM
+        boolean isAM = s.contains("AM"); //checks if AM
         boolean is12 = s.substring(0,2).equals("12"); //checks if hours is 12
         int hours = Integer.parseInt(s.substring(0,2)); //converts hours to int
         
