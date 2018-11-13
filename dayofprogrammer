@@ -1,0 +1,22 @@
+    static String dayOfProgrammer(int year) {
+        //plans
+        //1700 - 1917 divide by 4
+        //1918 - 2700 divide by 400, divide by 4 but not 100
+        //leap yeat after 1919 sept 12 sept 13 on common
+        //find way to calc leap year
+        
+        //stuff
+        boolean leap = false;
+        boolean pre = (year>=1700 && year<=1917) ? true : false;
+        
+        if(pre) leap = year%4==0;
+        else{
+            //insert the calculations for leap year here
+            leap = year%400 == 0 ^ (year%4 == 0 && year%100!=0);
+        }
+        
+        //return stuff
+        if(year==1918) return "26.09.1918";
+        if(leap) return "12.09." + year;
+        return "13.09." + year;
+    }
